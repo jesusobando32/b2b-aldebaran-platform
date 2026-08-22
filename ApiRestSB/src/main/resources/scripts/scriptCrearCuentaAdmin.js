@@ -34,7 +34,7 @@ window.addEventListener("DOMContentLoaded", (eventt)=>{
     //console.log(campos.nacimiento);
     if(continuar){
         if(document.getElementById("password1").value==document.getElementById("password2").value){
-            const petition= await fetch("http://localhost:8080/api/crearCuentaCliente",
+            const petition= await fetch("http://localhost:8081/api/crearCuentaCliente",
                 {
                     method: "POST",
                     headers:{

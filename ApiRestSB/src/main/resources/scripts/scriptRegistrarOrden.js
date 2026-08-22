@@ -47,7 +47,7 @@ let registrarOrden = async () => {
     }
 
     try {
-        const peticion = await fetch("http://localhost:8080/api/orden", {
+        const peticion = await fetch("http://localhost:8081/api/orden", {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

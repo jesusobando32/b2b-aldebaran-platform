@@ -15,7 +15,7 @@ function buscarOrden() {
         searchInput.style.border = ""; // Restablecer borde si es válido
     }
 
-    let url = `http://localhost:8080/api/orden/${cedulaCliente}`;
+    let url = `http://localhost:8081/api/orden/${cedulaCliente}`;
 
     fetch(url)
         .then(response => {
@@ -52,7 +52,7 @@ function buscarOrden() {
 }
 
 function verMas(id) {
-    let url = `http://localhost:8080/api/orden/${id}`;
+    let url = `http://localhost:8081/api/orden/${id}`;
 
     fetch(url)
         .then(response => {

@@ -27,7 +27,7 @@ window.addEventListener("DOMContentLoaded", (eventt)=>{
 })
 
 let cedulaExiste = async (cedula) => {
-    const peticion = await fetch("http://localhost:8080/api/perfiles", {
+    const peticion = await fetch("http://localhost:8081/api/perfiles", {
         method: 'GET',
         headers: {
             'Accept': 'application/json',
@@ -78,7 +78,7 @@ async function eliminarPerfil(cedula) {
     const confirmacion = confirm(`¿Estás seguro de que deseas eliminar el perfil con cédula ${cedula}?`); 
     if (confirmacion) { 
     try { 
-        const respuesta = await fetch(`http://localhost:8080/api/borrarCuenta/${cedula}`, { 
+        const respuesta = await fetch(`http://localhost:8081/api/borrarCuenta/${cedula}`, { 
             method: 'DELETE', 
             headers: { 
                 'Accept': 'application/json', 

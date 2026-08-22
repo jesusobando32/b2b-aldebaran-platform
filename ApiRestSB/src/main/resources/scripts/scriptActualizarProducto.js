@@ -5,7 +5,7 @@ function buscarProducto() {
     let identificacion = document.getElementById("searchInput").value;
     if (identificacion.trim() === "") { alert("Por favor, ingrese un ID de producto para buscar."); searchInput.style.border = "2px solid red"; return; } else { searchInput.style.border = ""; // Restablecer borde si es válido }
     }
-        let url = `http://localhost:8080/api/producto/${identificacion}`;
+        let url = `http://localhost:8081/api/producto/${identificacion}`;
 
     fetch(url)
         .then(response => {
@@ -40,7 +40,7 @@ function actualizarProducto() {
         return; // No se actualiza el producto
     }
 
-    let url = `http://localhost:8080/api/producto/${campos.identificacion}`;
+    let url = `http://localhost:8081/api/producto/${campos.identificacion}`;
     
     fetch(url, {
         method: 'PUT',

@@ -3,7 +3,7 @@ window.onload = function(){
 };
 
 let listarJuegos = async () => {
-    const peticion = await fetch('http://localhost:8080/api/juegos',
+    const peticion = await fetch('http://localhost:8081/api/juegos',
         {
             method: 'GET',
             headers: {
@@ -36,7 +36,7 @@ document.querySelector("#tabla tbody").outerHTML = contenidoTabla;
 
 let borrarJuego = async(id)=>{
 
-    const peticion = await fetch("http://localhost:8080/api/juego/"+id,
+    const peticion = await fetch("http://localhost:8081/api/juego/"+id,
     {   method: 'DELETE',
         headers: {
         'Accept': 'application/json',
@@ -55,7 +55,7 @@ let editarJuego = async (id)=>{
 
 
     idEditar = id;
-    const peticion = await fetch('http://localhost:8080/api/juego/'+id,
+    const peticion = await fetch('http://localhost:8081/api/juego/'+id,
         {
             method: 'GET',
             headers: {
@@ -82,7 +82,7 @@ campos.nombre = document.getElementById("nombre").value;
 campos.genero = document.getElementById("genero").value;
 campos.año = document.getElementById("año").value;
 
-const peticion = await fetch('http://localhost:8080/api/juegos',
+const peticion = await fetch('http://localhost:8081/api/juegos',
     {
         method: 'PUT',
         headers: {

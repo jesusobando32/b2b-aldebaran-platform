@@ -46,7 +46,7 @@ let registrarProducto = async () => {
     }
 
     try {
-        const peticion = await fetch("http://localhost:8080/api/productos",
+        const peticion = await fetch("http://localhost:8081/api/productos",
         {   
             method: 'POST',
             headers: {

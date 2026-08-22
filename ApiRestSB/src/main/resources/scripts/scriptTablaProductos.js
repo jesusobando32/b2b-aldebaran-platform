@@ -5,7 +5,7 @@ window.onload = function() {
 //LISTAR PRODUCTOS
 let listarPeliculas = async()=>{
 
-    const peticion = await fetch("http://localhost:8080/api/productos",
+    const peticion = await fetch("http://localhost:8081/api/productos",
     {   method: 'GET',
         headers: {
         'Accept': 'application/json',
@@ -35,7 +35,7 @@ let listarPeliculas = async()=>{
 
 let filtrarProductos = async () => {
     const disponibilidad = document.getElementById("filterDisponibilidad").value;
-    const peticion = await fetch("http://localhost:8080/api/productos",
+    const peticion = await fetch("http://localhost:8081/api/productos",
     {   method: 'GET',
         headers: {
         'Accept': 'application/json',
@@ -66,7 +66,7 @@ let filtrarProductos = async () => {
 
 let borrarJuego = async(id)=>{
 
-    const peticion = await fetch("http://localhost:8080/api/juego/"+id,
+    const peticion = await fetch("http://localhost:8081/api/juego/"+id,
     {   method: 'DELETE',
         headers: {
         'Accept': 'application/json',
@@ -85,7 +85,7 @@ let editarJuego = async (id)=>{
 
 
     idEditar = id;
-    const peticion = await fetch('http://localhost:8080/api/juego/'+id,
+    const peticion = await fetch('http://localhost:8081/api/juego/'+id,
         {
             method: 'GET',
             headers: {
@@ -112,7 +112,7 @@ campos.nombre = document.getElementById("nombre").value;
 campos.genero = document.getElementById("genero").value;
 campos.año = document.getElementById("año").value;
 
-const peticion = await fetch('http://localhost:8080/api/juegos',
+const peticion = await fetch('http://localhost:8081/api/juegos',
     {
         method: 'PUT',
         headers: {

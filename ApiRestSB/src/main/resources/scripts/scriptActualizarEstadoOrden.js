@@ -17,7 +17,7 @@ function buscarOrden() {
         searchInput.style.border = ""; // Restablecer borde si es válido
     }
 
-    let url = `http://localhost:8080/api/orden/${cedulaCliente}`;
+    let url = `http://localhost:8081/api/orden/${cedulaCliente}`;
 
     fetch(url)
         .then(response => {
@@ -75,7 +75,7 @@ function actualizarProducto() {
     const nuevoEstado = document.getElementById("disp").value;
 
     // Construye la URL para la solicitud PUT
-    let url = `http://localhost:8080/api/ModEstadoOrden/${ordenSeleccionadaId}`; // Asegúrate de que esta URL sea correcta para tu API
+    let url = `http://localhost:8081/api/ModEstadoOrden/${ordenSeleccionadaId}`; // Asegúrate de que esta URL sea correcta para tu API
 
     // Crea el objeto de la orden a actualizar
     const ordenActualizada = {

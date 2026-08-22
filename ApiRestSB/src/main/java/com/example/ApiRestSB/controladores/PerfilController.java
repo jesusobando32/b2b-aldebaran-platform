@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import java.net.URI;
 
 import com.example.ApiRestSB.modelos.Perfil;
 import com.example.ApiRestSB.repositorios.PerfilRepository;
@@ -61,14 +63,14 @@ public class PerfilController {
     }
 
     @GetMapping("/")
-    public String iniciar() {
-        return "/InicioSesion.html";
+    public ResponseEntity<Void> iniciar() {
+        return ResponseEntity.status(HttpStatus.FOUND).location(URI.create("/InicioSesion.html")).build();
     }
 
     @CrossOrigin("http://127.0.0.1:5500")
     @GetMapping("/menuPrincipal")
-    public String menu() {
-        return "menuPrincipal.html";
+    public ResponseEntity<Void> menu() {
+        return ResponseEntity.status(HttpStatus.FOUND).location(URI.create("/menuPrincipal.html")).build();
     }
     
 @CrossOrigin("http://127.0.0.1:5500")

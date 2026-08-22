@@ -26,7 +26,7 @@ window.addEventListener("DOMContentLoaded", (eventt)=>{
     }
     if(continuar){
         if(document.getElementById("password1").value==document.getElementById("password2").value){
-            const petition= await fetch("http://localhost:8080/api/crearCuentaCliente",
+            const petition= await fetch("http://localhost:8081/api/crearCuentaCliente",
                 {
                     method: "POST",
                     headers:{
@@ -57,7 +57,7 @@ window.addEventListener("DOMContentLoaded", (eventt)=>{
                 avisoCedula=false;
             }
             if(!avisoEdad){
-                window.location.href="http://localhost:8080/InicioSesion.html"
+                window.location.href="http://localhost:8081/InicioSesion.html"
             }
             if(avisoCedula && avisoEdad && avisoPassword){
                 alert("registro con exito");

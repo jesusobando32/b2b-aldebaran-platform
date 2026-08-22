@@ -63,7 +63,7 @@ window.addEventListener("DOMContentLoaded", (eventt)=>{
 })
 
 let cedulaExiste = async (cedula) => {
-    const peticion = await fetch("http://localhost:8080/api/perfiles", {
+    const peticion = await fetch("http://localhost:8081/api/perfiles", {
         method: 'GET',
         headers: {
             'Accept': 'application/json',
@@ -104,7 +104,7 @@ let cedulaExiste = async (cedula) => {
 };
 
 async function actualizarSaldo(perfil) { 
-    const response = await fetch("http://localhost:8080/api/actualizaSaldo", { 
+    const response = await fetch("http://localhost:8081/api/actualizaSaldo", { 
         method: 'PUT', 
         headers: { 
             'Content-Type': 
@@ -121,7 +121,7 @@ async function actualizarSaldo(perfil) {
 }
 
 let modificarSaldo = async(tipoDeModificacion, cedula)=>{
-    const peticion = await fetch("http://localhost:8080/api/perfiles", {
+    const peticion = await fetch("http://localhost:8081/api/perfiles", {
         method: 'GET',
         headers: {
             'Accept': 'application/json',

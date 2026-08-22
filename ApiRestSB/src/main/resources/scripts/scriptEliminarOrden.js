@@ -17,7 +17,7 @@ function buscarOrden() {
         searchInput.style.border = ""; // Restablecer borde si es válido
     }
 
-    let url = `http://localhost:8080/api/orden/${cedulaCliente}`;
+    let url = `http://localhost:8081/api/orden/${cedulaCliente}`;
 
     fetch(url)
         .then(response => {
@@ -72,7 +72,7 @@ function eliminarOrden() {
     }
 
     // Construye la URL para la solicitud DELETE
-    let url = `http://localhost:8080/api/eliminarorden/${ordenSeleccionadaId}`;
+    let url = `http://localhost:8081/api/eliminarorden/${ordenSeleccionadaId}`;
 
     // Realiza la solicitud DELETE
     fetch(url, {

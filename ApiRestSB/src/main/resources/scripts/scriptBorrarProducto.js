@@ -13,7 +13,7 @@ window.onload = function() {
 //LISTAR PRODUCTOS
 let listarProductos = async()=>{
 
-    const peticion = await fetch("http://localhost:8080/api/productos",
+    const peticion = await fetch("http://localhost:8081/api/productos",
     {   method: 'GET',
         headers: {
         'Accept': 'application/json',
@@ -64,7 +64,7 @@ function enableRowSelection() {
 
 async function borrarProducto(){
     if(SelectedRowID!=null){
-        const response = await fetch("http://localhost:8080/api/eliminarProducto", { 
+        const response = await fetch("http://localhost:8081/api/eliminarProducto", { 
             method: 'DELETE', 
             headers: { 
                 'Content-Type': 

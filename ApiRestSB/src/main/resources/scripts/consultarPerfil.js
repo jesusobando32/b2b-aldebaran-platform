@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", (eventt)=>{
 })
 
 let cedulaExiste = async (cedula) => {
-    const peticion = await fetch("http://localhost:8080/api/perfiles", {
+    const peticion = await fetch("http://localhost:8081/api/perfiles", {
         method: 'GET',
         headers: {
             'Accept': 'application/json',

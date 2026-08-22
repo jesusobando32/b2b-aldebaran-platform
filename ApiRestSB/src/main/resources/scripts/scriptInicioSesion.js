@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", (eventt)=>{
             campos.nombre=document.getElementById("cedula").value;
             campos.password=document.getElementById("password").value;
             
-            const petition= await fetch("http://localhost:8080/api/perfiles",
+            const petition= await fetch("http://localhost:8081/api/perfiles",
                 {
                     method: "GET",
                     headers:{
@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", (eventt)=>{
             if(perfilValido){
                 console.log("ok")
                 localStorage.setItem('rol', cliente.privilegio);
-                window.location.href="http://localhost:8080/menuPrincipal.html";
+                window.location.href="http://localhost:8081/menuPrincipal.html";
             } else{
                 alert("Perfil o contraseña invalido");
             }
