@@ -1,6 +1,6 @@
-# PedidosAbastoAlbedaran (API Rest) 🚀
+# 📦 Albedarán: Plataforma B2B de Pedidos y Abastos
 
-> Un sistema de gestión de pedidos y control de abastos para Albedarán, impulsado por una robusta API REST en Spring Boot.
+> Sistema de gestión de pedidos e inventario para el centro de abastos Albedarán, con una API REST en Spring Boot.
 
 ![Java](https://img.shields.io/badge/Java-23-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.3.7-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
@@ -8,7 +8,14 @@
 ![Maven](https://img.shields.io/badge/Maven-Build-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
 
 ## 📌 Descripción
-**PedidosAbastoAlbedaran** es una aplicación backend (con vistas estáticas integradas) diseñada para optimizar y gestionar el flujo de pedidos de un centro de abastos. Proporciona una interfaz programática (API REST) para manejar el inventario, realizar órdenes y gestionar operaciones de forma eficiente.
+**Albedarán** es una aplicación backend (con vistas estáticas integradas) diseñada para optimizar y gestionar el flujo de pedidos de un centro de abastos. Proporciona una interfaz programática (API REST) para manejar el inventario, realizar órdenes y gestionar operaciones de forma eficiente.
+
+## 👥 Equipo y mi rol
+
+Proyecto en equipo de la UCAB. Trabajé como desarrollador full stack:
+
+* **Frontend:** desarrollé las vistas web (HTML, CSS y JavaScript) que consumen la API.
+* **Backend:** implementé varias funcionalidades de la API REST en Spring Boot.
 
 ## 🏗️ Arquitectura y Stack Tecnológico
 - **Lenguaje:** Java 23
@@ -19,7 +26,7 @@
 - **Frontend Embebido:** Archivos estáticos servidos desde `/view`, `/css`, `/img`, y `/scripts` directamente por el servidor web integrado (Tomcat).
 
 ## ✨ Características Principales (Features)
-- API RESTful completa para la gestión de recursos de abasto.
+- API REST para gestionar productos, órdenes y perfiles de usuario.
 - Diseño sin dependencias externas complejas (base de datos H2 en memoria).
 - Servidor web estático incluido para renderizado rápido de interfaces cliente.
 - Actuadores de Spring Boot integrados para monitoreo del estado de la aplicación.
@@ -35,8 +42,8 @@ Sigue estos pasos para poner a funcionar el proyecto en tu máquina local:
 
 ### 2. Clonar el repositorio
 ```bash
-git clone <URL_DEL_REPOSITORIO>
-cd PedidosAbastoAlbedaran/ApiRestSB
+git clone https://github.com/jesusobando32/b2b-aldebaran-platform.git
+cd b2b-aldebaran-platform/ApiRestSB
 ```
 
 ### 3. Configuración (Opcional)
@@ -44,7 +51,7 @@ Puedes habilitar la consola de la base de datos H2 para inspeccionar los datos d
 ```properties
 spring.h2.console.enabled=true
 ```
-*(Podrás acceder a ella desde `http://localhost:8080/h2-console`)*.
+*(Podrás acceder a ella desde `http://localhost:8081/h2-console`)*.
 
 ### 4. Ejecutar la aplicación
 Puedes utilizar el wrapper de Maven incluido para no tener que instalar Maven globalmente:
